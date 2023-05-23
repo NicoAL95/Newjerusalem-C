@@ -1,0 +1,444 @@
+/* CDN Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Work+Sans:wght@300&display=swap');
+/* End CDN Fonts */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  /* Geometos Fonts */
+    @font-face {
+      font-family: 'geoExtra';
+      src: url('/libraries/fonts/GeometosNeueExtraBold.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'geoBold';
+      src: url('/libraries/fonts/GeometosNeueBold.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'geoReg';
+      src: url('/libraries/fonts/GeometosNeue.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'geoLight';
+      src: url('/libraries/fonts/GeometosNeueLight.ttf') format('truetype');
+  }
+  /* End Geometos Fonts */
+
+  /* Futura Fonts */
+    @font-face {
+      font-family: 'futExtra';
+      src: url('/libraries/fonts/FuturaNowHeadlineExtraBold.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'futBold';
+      src: url('/libraries/fonts/FuturaNowHeadlineBold.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'futMed';
+      src: url('/libraries/fonts/FuturaNowHeadlineMedium.ttf') format('truetype');
+  }
+    @font-face {
+      font-family: 'futReg';
+      src: url('/libraries/fonts/FuturaNowHeadline.ttf') format('truetype');
+  }
+  /* End Futura Fonts */
+}
+
+@layer components{
+  .comingSoon{
+    @apply bg-germanMilk h-screen w-full flex flex-col justify-center items-center font-geoExtra text-darkWheel
+  }
+  span{
+    @apply font-futReg uppercase
+  }
+  .sideGuard{
+    @apply px-[40px] xs:px-[70px]
+  }
+
+  /* Navbar */
+  .navbar{
+    @apply fixed top-0 left-0 w-full sideGuard py-[26px] bg-germanMilk flex justify-between text-darkWheel items-center  transition-all ease-in z-[200]
+  }
+  .borderOn{
+    @apply border-b border-darkWheel/20
+  }
+  .navLogo{
+    @apply relative w-[38px] h-[45px]
+  }
+  .navFlex{
+    @apply flex bg-germanMilk border-l border-darkWheel/20 slg:border-0  h-screen slg:space-x-[40px] font-geoReg text-[15px] flex-col slg:flex-row slg:h-fit slg:static  
+  }
+  .active{
+    @apply font-geoBold slg:mb-[-5px]
+  }
+  .navTop{
+    @apply flex space-x-6 items-center font-geoBold px-5 slg:hidden
+  }
+  .navTitle{
+    @apply text-[12px]
+  }
+  .navContent{
+    @apply z-50 slg:ml-[6%] xlg:ml-[16%] absolute top-0 h-screen transition-all duration-300 ease-in-out slg:h-fit slg:static 
+  }
+  .navOn{
+    @apply right-0
+  }
+  .navOff{
+    @apply right-[-100%]
+  }
+  .navLink{
+    @apply py-3 px-5 hover:bg-darkWheel hover:text-germanMilk w-full inline-block slg:block slg:py-0 slg:px-0 slg:hover:bg-transparent slg:hover:text-darkWheel cursor-pointer select-none
+  }
+  .navItem{
+    @apply first:py-6 border-b border-darkWheel/20 slg:border-0 slg:py-0 flex items-center slg:first:hidden
+  }
+  .navText{
+    @apply font-geoBold text-[15px] hidden xs:block
+  }
+  .navBurger{
+    @apply relative w-[26px] h-[20px] slg:hidden
+  }
+  .navClose{
+    @apply relative w-[30px] h-[30px] slg:hidden
+  }
+  /* End Navbar */
+
+  /* Head Title */
+  .headTitle{
+    @apply mt-[97px] py-[90px] sideGuard bg-germanMilk
+  }
+  .headTitleWrapper{
+    @apply flex flex-col justify-center items-center text-darkWheel
+  }
+  .subName{
+    @apply font-geoBold xs:hidden
+  }
+  .subTitle{
+    @apply w-full justify-evenly uppercase font-geoReg hidden text-[12px] xs:flex elg:text-[15px]
+  }
+  .subHero{
+    @apply font-geoBold
+  }
+  .superTitle{
+    @apply my-[25px] font-geoExtra text-center text-[60px] xs:text-[70px] elg:text-[80px] nlg:text-[90px] slg:text-[100px] xlg:text-[135px]
+  }
+  .superMedium{
+    @apply my-[25px] font-geoExtra text-center text-[40px] xs:text-[60px] elg:text-[70px] nlg:text-[70px] slg:text-[90px] xlg:text-[135px]
+  }
+  .superMini{
+    @apply my-[25px] font-geoExtra text-center text-[50px] xs:text-[60px] elg:text-[70px] nlg:text-[70px] slg:text-[90px] xlg:text-[110px]
+  }
+  .verseTitle{
+    @apply w-[90%] elg:w-[75%] nlg:w-[60%] sbg:w-[52%] mx-auto text-center
+  }
+  .verseContent{
+    @apply font-geoReg text-[13px] elg:text-[15px] mb-[18px]
+  }
+  .verseChapter{
+    @apply font-geoBold text-[13px] elg:text-[15px] mb-[18px]
+  }
+  /* End Head Title */
+
+  /* Service Home */
+  .serviceHome{
+    @apply xs:sideGuard bg-germanMilk relative w-full h-full pb-[100px]
+  }
+  .serviceBackground{
+    @apply relative aspect-w-1 aspect-h-[16/9]  xs:aspect-w-1 xs:aspect-h-[16/9] slg:aspect-w-2 slg:aspect-h-[14/9] xlg:aspect-w-2 xlg:aspect-h-[11/9]
+  }
+  .serviceWrapper{
+    @apply absolute left-0 top-0 slg:top-auto slg:bottom-0 w-full h-fit flex flex-col-reverse justify-start slg:grid slg:grid-rows-1 slg:grid-cols-12
+  }
+  .serviceSquare{
+    @apply slg:row-start-1 py-[20px] px-[40px] smn:w-[90%] slg:w-full slg:col-span-7 xlg:col-span-6 h-fit bg-germanMilk slg:mt-auto
+  }
+  .serviceTitle{
+    @apply col-span-12 mb-8 slg:mb-0 slg:row-start-1 xlg:col-span-6 flex items-start justify-start ml-10 mt-10 slg:ml-0 slg:mt-0 slg:items-center slg:justify-center text-germanMilk font-geoBold text-[50px] blg:text-[69px] xlg:text-[89px] leading-tight
+  }
+  .serSect{
+    @apply py-[30px] border-b border-ironGrey/80 last:border-0
+  }
+  .serDate{
+    @apply font-futMed text-darkWheel/80 text-[12px] blg:text-[15px] elg:text-[18px] mb-[20px]
+  }
+  .serPastor{
+    @apply font-futBold text-ironGrey text-[14px] blg:text-[17px] elg:text-[22px] capitalize
+  }
+  .serTitle{
+    @apply font-futExtra text-darkWheel text-[17px] blg:text-[20px] elg:text-[25px] capitalize
+  }
+  /* End Service Home */
+
+  /* Daily Hightlight */
+  .dailyHighlight{
+    @apply sideGuard bg-germanMilk text-darkWheel
+  }
+  .devTitle{
+    @apply font-geoExtra text-[30px] smn:text-[45px] klg:text-[55px] leading-none
+  }
+  .devDate{
+    @apply font-futReg text-[20px] smn:text-[25px] klg:text-[35px] uppercase 
+  }
+  .devHighTitle{
+    @apply font-futMed text-[25px] smn:text-[35px] klg:text-[45px] mt-[50px] capitalize
+  }
+  .devHighCont{
+    @apply font-futReg text-[15px] smn:text-[20px] klg:text-[25px] mt-[10px]
+  }
+  .devHighButton{
+    @apply text-center mt-[40px] xs:mt-[50px]
+  }
+  .textButton{
+    @apply font-futBold capitalize px-4 underline underline-offset-[10px] text-[18px] smn:text-[20px] w-fit text-darkWheel hover:bg-darkWheel hover:text-germanMilk hover:underline-offset-[10px] hover:decoration-germanMilk hover:pt-3 hover:pb-3 transition-all ease-in duration-200 xs:hover:pt-0
+  }
+  .textButtonWhite{
+    @apply font-futBold capitalize px-4 underline underline-offset-[10px] text-[18px] smn:text-[20px] w-fit text-wallWhite hover:bg-wallWhite hover:text-darkWheel hover:underline-offset-[10px] hover:decoration-darkWheel hover:pt-3 hover:pb-3 transition-all ease-in duration-200 xs:hover:pt-0
+  }
+  .viewMore{
+    @apply font-futMed text-[16px] smn:text-[20px] text-darkWheel rounded-full pt-[13px] pb-[15px] px-[30px] border border-darkWheel leading-none hover:bg-darkWheel hover:text-germanMilk transition-all duration-200 ease-in cursor-pointer
+  }
+  /* End Daily Hightlight */
+
+  /* Card Show High */
+  .cardShowHigh{
+    @apply sideGuard bg-germanMilk py-[80px]
+  }
+  .cardGrid{
+    @apply grid grid-rows-1 grid-cols-12 gap-y-[20px] gap-x-[20px]
+  }
+  .cardSquare{
+    @apply col-span-12 elg:col-span-6 sbg:col-span-4 py-[50px] px-[40px] bg-darkWheel text-center text-wallWhite hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.30)] transition-all ease-in duration-300
+  }
+  .cardLast{
+    @apply elg:col-start-4 sbg:col-start-9
+  }
+  .cardDevDate{
+    @apply font-futMed text-[12px] xlg:text-[13px] uppercase
+  }
+  .cardDevTitle{
+    @apply font-futBold text-[24px] xlg:text-[28px] capitalize mt-[15px]
+  }
+  .cardDevDesc{
+    @apply font-futReg text-[15px] xlg:text-[18px] mt-[20px] capitalize
+  }
+  .cardDevButton{
+    @apply mt-[20px]
+  }
+  .cardMore{
+    @apply mt-[50px] text-center
+  }
+  /* End Card Show High */
+
+  /* Photo Home */
+  .photoHome{
+    @apply sideGuard bg-germanMilk pb-[80px]
+  }
+  .photoHomePicture{
+    @apply aspect-w-3 blg:aspect-w-5 aspect-h-1 relative
+  }
+  /* End Photo Home */
+
+  /* Youth Home */
+  .youthHome{
+    @apply sideGuard bg-germanMilk pb-[80px]
+  }
+  .youthHomeWrap{
+    @apply grid grid-rows-1 grid-cols-12
+  }
+  .youthText{
+    @apply col-span-12 smn:col-span-7 jlg:col-span-8 flex w-full h-full items-center justify-start text-darkWheel
+  }
+  .youthJoin{
+    @apply font-geoExtra text-[60px] smn:text-[50px] klg:text-[70px] jlg:text-[90px] slg:text-[110px] xlg:text-[120px] leading-tight
+  }
+  .youthTitle{
+    @apply font-geoBold text-[30px] smn:text-[20px] klg:text-[30px] jlg:text-[40px] slg:text-[50px] xlg:text-[60px] leading-none mt-[10px]
+  }
+  .youthSub{
+    @apply font-futReg text-[20px] smn:text-[15px] klg:text-[20px] slg:text-[30px] xlg:text-[40px] uppercase leading-tight
+  }
+  .youthDate{
+    @apply font-futReg uppercase text-[18px] smn:text-[14px] klg:text-[18px] slg:text-[25px] xlg:text-[35px] mt-[30px] klg:mt-[40px] slg:mt-[60px]
+  }
+  .youthAddress{
+    @apply font-futReg text-[15px] smn:text-[12px] klg:text-[15px] mb-[20px] smn:mb-0
+  }
+  .youthImage{
+    @apply col-span-12 smn:col-span-5 jlg:col-span-4 
+  }
+  .youthImg{
+    @apply aspect-w-9 aspect-h-16 relative
+  }
+  /* End Youth Home */
+
+  /* Verse Mark */
+  .verseMark{
+    @apply sideGuard bg-darkWheel
+  }
+  .verseGrid{
+    @apply grid grid-rows-1 grid-cols-12 py-[80px]
+  }
+  .verseSpan{
+    @apply col-span-12 blg:col-span-10 blg:col-start-2 elg:col-span-8 elg:col-start-3 text-germanMilk text-center
+  }
+  .verseHighChapter{
+    @apply font-geoBold text-[15px] xs:text-[20px] xlg:text-[25px]
+  }
+  .verseHighContent{
+    @apply  font-geoReg text-[20px] xs:text-[25px] elg:text-[30px] xlg:text-[35px] mt-[20px]
+  }
+  /* End Verse Mark */
+
+  /* Coming Events */
+  .comingEvents{
+    @apply sideGuard bg-germanMilk py-[100px]
+  }
+  .comingTitle{
+    @apply font-geoExtra text-darkWheel text-[30px] xs:text-[35px] blg:text-[45px] elg:text-[55px] text-center
+  }
+  .comingGrid{
+    @apply grid grid-rows-1 grid-cols-12
+  }
+  .comingCont{
+    @apply relative col-span-12 jlg:col-span-9 mt-[55px]
+  }
+  .comeImg{
+    @apply relative aspect-w-3 aspect-h-4 mxs:aspect-h-3 nlg:aspect-h-2
+  }
+  .comeFloat{
+    @apply absolute -translate-y-1/2 top-1/2 jlg:right-[-30%] bg-germanMilk text-center py-[50px] px-[38px]
+  }
+  .floatTitle{
+    @apply font-geoBold text-darkWheel text-[18px] blg:text-[30px] uppercase
+  }
+  .floatDate{
+    @apply font-futMed text-[14px] blg:text-[20px] text-darkWheel/80 uppercase
+  }
+  .floatTime{
+    @apply font-futBold text-darkWheel text-[35px] blg:text-[55px] uppercase mt-[20px]
+  }
+  .floatAddress{
+    @apply font-futMed text-darkWheel text-[12px] blg:text-[16px] w-[75%] mx-auto
+  }
+  /* End Coming Events */
+
+  /* Detail About */
+  .detailAbout{
+    @apply sideGuard bg-germanMilk pb-[100px]
+  }
+  .detailAboutTitle{
+    @apply font-geoBold text-[25px] hlg:text-[35px] nlg:text-[45px] text-darkWheel text-center leading-relaxed smn:leading-none
+  }
+  .detailAboutDesc{
+    @apply font-futReg text-[15px] hlg:text-[17px] nlg:text-[25px] text-darkWheel text-center
+  }
+  .detailGrid{
+    @apply grid grid-rows-1 grid-cols-12 mt-[80px] gap-y-[23px] hlg:gap-x-[23px] hlg:gap-y-0
+  }
+  .detailGridFlex{
+    @apply w-full h-full flex flex-col justify-end
+  }
+  .detailGridName{
+    @apply font-futBold text-[35px] elg:text-[45px] xlg:text-[55px] text-darkWheel
+  }
+  .detailGridRole{
+    @apply font-futReg text-darkWheel text-[25px] xlg:text-[35px] uppercase
+  }
+  .detailGridDesc{
+    @apply font-futReg text-darkWheel text-[15px] slg:text-[18px] xlg:text-[21px] uppercase mt-[50px] slg:mt-[70px]
+  }
+  .detailGridCont{
+    @apply col-span-12 hlg:col-span-8
+  }
+  .detailGridImg{
+    @apply col-span-12 hlg:col-span-4 aspect-w-1 aspect-h-[4/3]  relative
+  }
+  /* End Detail About */
+
+  /* Maps About */
+  .mapsAbout{
+    @apply sideGuard bg-germanMilk pb-[100px]
+  }
+  .mapsTitle{
+    @apply font-geoBold text-[25px] hlg:text-[35px] nlg:text-[45px] text-center text-darkWheel leading-relaxed smn:leading-none
+  }
+  .mapsDesc{
+    @apply font-futMed text-[12px] hlg:text-[15px] nlg:text-[20px] text-center text-darkWheel mb-[40px] bxl:mb-[60px]
+  }
+  .mapsWrapper{
+    @apply aspect-w-2 aspect-h-1
+  }
+  /* End Maps About */
+
+  /* Prev Next */
+  .prevNext{
+    @apply text-center mt-[50px]
+  }
+  .butDis{
+    @apply cursor-not-allowed hover:bg-transparent hover:text-darkWheel opacity-70
+  }
+  /* End Prev Next */
+
+  /* Daily Devotion */
+  .devPar{
+    @apply pt-[20px]
+  }
+  .futBold{
+    @apply font-futBold capitalize
+  }
+  .devHighFlex{
+    @apply flex flex-col-reverse zlg:flex-row justify-between zlg:items-center
+  }
+  .devIcons{
+    @apply flex flex-row space-x-[15px] zlg:mb-0 mb-[50px] justify-center zlg:justify-end
+  }
+  .iconFlex{
+    @apply relative w-[45px] h-[45px]
+  }
+  /* End Daily Devotion */
+
+  /* Header Information */
+  .headerInformation{
+    @apply sideGuard pb-[30px] bg-germanMilk
+  }
+  .infoTitle{
+    @apply font-geoExtra text-[35px] klg:text-[45px] nlg:text-[55px] text-darkWheel text-center
+  }
+  .infoSub{
+    @apply w-full blg:w-[70%] klg:w-[60%] font-futReg text-[18px] klg:text-[20px] nlg:text-[25px] text-darkWheel text-center uppercase mx-auto
+  }
+  .infoButton{
+    @apply text-center mt-[60px]
+  }
+  /* End Header Information */
+
+  /* Footer */
+  .footer{
+    @apply sideGuard bg-darkWheel py-[50px] flex flex-col items-center space-y-[40px]
+  }
+  .footLogo{
+    @apply relative w-[42px] h-[49px]
+  }
+  .footVerse{
+    @apply font-geoReg text-wallWhite/80 text-[15px] w-full smn:w-[75%] klg:w-[60%] nlg:w-[48%] text-center 
+  }
+  .footLinks{
+    @apply text-center flex flex-col space-y-8 mxs:flex-row mxs:space-x-8 mxs:space-y-0 font-dmSans text-[15px]
+  }
+  .footLink, .footSosItem{
+    @apply text-wallWhite/80 hover:text-wallWhite transition-all ease-in duration-200
+  }
+  .footSos{
+    @apply flex space-x-[40px] text-[22px]
+  }
+  .footAddress{
+    @apply font-geoReg text-[11px] hlg:text-[13px] text-wallWhite/80 text-center
+  }
+  .footMark{
+    @apply font-workSans text-[14px] hlg:text-[16px] text-[#E3E4E6] text-center
+  }
+  /* End Footer */
+
+}
